@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _myexit - exits the shell
+ * _ourexits - exits the shell
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: exits with a given exit status
  *         (0) if info.argv[0] != "exit"
  */
- int _ourexits(info_t *info)
+int _ourexits(info_t *info)
 {
 	int exitcheck;
 
@@ -30,7 +30,7 @@
 }
 
 /**
- * _mycd - changes the current directory of the process
+ * _outcds - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
@@ -52,7 +52,7 @@ int _outcds(info_t *info)
 		else
 			chdir_ret = chdir(dir);
 	}
-	else if ( _strcompare(info->argv[1], "-") == 0)
+	else if (_strcompare(info->argv[1], "-") == 0)
 	{
 		if (!_getenvrn(info, "OLDPWD="))
 		{
@@ -68,7 +68,7 @@ int _outcds(info_t *info)
 		chdir_ret = chdir(info->argv[1]);
 	if (chdir_ret == -1)
 	{
-		 print_err(info, "can't cd to ");
+		print_err(info, "can't cd to ");
 		_inputstr(info->argv[1]), _inputcha('\n');
 	}
 	else
@@ -80,7 +80,7 @@ int _outcds(info_t *info)
 }
 
 /**
- * _myhelp - changes the current directory of the process
+ * _ourhelps - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0

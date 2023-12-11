@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * **strtow - splits a string into words. Repeat delimiters are ignored
+ * **strgtoww - splits a string into words. Repeat delimiters are ignored
  * @str: the input string
  * @d: the delimeter string
  * Return: a pointer to an array of strings, or NULL on failure
  */
 
- char **strgtoww(char *str, char *d)
+char **strgtoww(char *str, char *d)
 {
 	int i, j, k, m, numwords = 0;
 	char **s;
@@ -17,7 +17,7 @@
 	if (!d)
 		d = " ";
 	for (i = 0; str[i] != '\0'; i++)
-		if (!is_deliminated(str[i], d) && (is_deliminated(str[i + 1], d) || !str[i + 1]))
+		if (!is_delimi(str[i], d) && (is_delimi(str[i + 1], d) || !str[i + 1]))
 			numwords++;
 
 	if (numwords == 0)
@@ -27,10 +27,10 @@
 		return (NULL);
 	for (i = 0, j = 0; j < numwords; j++)
 	{
-		while (is_deliminated(str[i], d))
+		while (is_delimi(str[i], d))
 			i++;
 		k = 0;
-		while (!is_deliminated(str[i + k], d) && str[i + k])
+		while (!is_delimi(str[i + k], d) && str[i + k])
 			k++;
 		s[j] = malloc((k + 1) * sizeof(char));
 		if (!s[j])
@@ -49,7 +49,7 @@
 }
 
 /**
- * **strtow2 - splits a string into words
+ * **strgtoww2 - splits a string into words
  * @str: the input string
  * @d: the delimeter
  * Return: a pointer to an array of strings, or NULL on failure

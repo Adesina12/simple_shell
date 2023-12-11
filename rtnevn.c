@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_environ - returns the string array copy of our environ
+ * get_envi - returns the string array copy of our environ
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  * Return: Always 0
@@ -18,7 +18,7 @@ char **get_envi(info_t *info)
 }
 
 /**
- * _unsetenv - Remove an environment variable
+ * _unsetern - Remove an environment variable
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
  *  Return: 1 on delete, 0 otherwise
@@ -50,7 +50,7 @@ int _unsetern(info_t *info, char *var)
 }
 
 /**
- * _setenv - Initialize a new environment variable,
+ * _setevn - Initialize a new environment variable,
  *             or modify an existing one
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
@@ -67,7 +67,7 @@ int _setevn(info_t *info, char *var, char *value)
 	if (!var || !value)
 		return (0);
 
-	buf = malloc( _strlength(var) +  _strlength(value) + 2);
+	buf = malloc(_strlength(var) + _strlength(value) + 2);
 	if (!buf)
 		return (1);
 	_strcopy(buf, var);

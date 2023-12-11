@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _erratoi - converts a string to an integer
+ * _erroratoi - converts a string to an integer
  * @s: the string to be converted
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
- int _erroratoi(char *s)
+int _erroratoi(char *s)
 {
 	int i = 0;
 	unsigned long int result = 0;
@@ -29,7 +29,7 @@
 }
 
 /**
- * print_error - prints an error message
+ * print_err - prints an error message
  * @info: the parameter & return info struct
  * @estr: string containing specified error type
  * Return: 0 if no numbers in string, converted number otherwise
@@ -47,7 +47,7 @@ void print_err(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
+ * prn_d - function prints a decimal (integer) number (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
  *
@@ -86,7 +86,7 @@ int prn_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa
+ * convert_nbr - converter function, a clone of itoa
  * @num: number
  * @base: base
  * @flags: argument flags
@@ -122,12 +122,12 @@ char *convert_nbr(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - function replaces first instance of '#' with '\0'
+ * remv_comts - function replaces first instance of '#' with '\0'
  * @buf: address of the string to modify
  *
  * Return: Always 0;
  */
- void remv_comts(char *buf)
+void remv_comts(char *buf)
 {
 	int i;
 

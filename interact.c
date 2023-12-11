@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * interactive - returns true if shell is interactive mode
+ * intratv - returns true if shell is interactive mode
  * @info: struct address
  *
  * Return: 1 if interactive mode, 0 otherwise
@@ -12,12 +12,12 @@ int intratv(info_t *info)
 }
 
 /**
- * is_delim - checks if character is a delimeter
+ * is_delimi - checks if character is a delimeter
  * @c: the char to check
  * @delim: the delimeter string
  * Return: 1 if true, 0 if false
  */
-int is_deliminated(char c, char *delim)
+int is_delimi(char c, char *delim)
 {
 	while (*delim)
 		if (*delim++ == c)

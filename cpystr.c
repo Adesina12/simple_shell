@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- **_strncpy - copies a string
+ **_strncopy - copies a string
  *@dest: the destination string to be copied to
  *@src: the source string
  *@n: the amount of characters to be copied
  *Return: the concatenated string
  */
- char *_strncopy(char *dest, char *src, int n)
+char *_strncopy(char *dest, char *src, int n)
 {
 	int i, j;
 	char *s = dest;
@@ -31,7 +31,7 @@
 }
 
 /**
- **_strncat - concatenates two strings
+ **_strncatts - concatenates two strings
  *@dest: the first string
  *@src: the second string
  *@n: the amount of bytes to be maximally used
@@ -58,7 +58,7 @@ char *_strncatts(char *dest, char *src, int n)
 }
 
 /**
- **_strchr - locates a character in a string
+ **_strchar - locates a character in a string
  *@s: the string to be parsed
  *@c: the character to look for
  *Return: (s) a pointer to the memory area s

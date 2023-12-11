@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * hsh - main shell loop
+ * cde - main shell loop
  * @info: the parameter & return info struct
  * @av: the argument vector from main()
  *
@@ -24,7 +24,7 @@ int cde(info_t *info, char **av)
 			set_information(info, av);
 			builtin_ret = fd_built(info);
 			if (builtin_ret == -1)
-				 fd_cmd(info);
+				fd_cmd(info);
 		}
 		else if (intratv(info))
 			_putchar('\n');
@@ -44,7 +44,7 @@ int cde(info_t *info, char **av)
 }
 
 /**
- * find_builtin - finds a builtin command
+ * fd_built - finds a builtin command
  * @info: the parameter & return info struct
  *
  * Return: -1 if builtin not found,
@@ -78,7 +78,7 @@ int fd_built(info_t *info)
 }
 
 /**
- * find_cmd - finds a command in PATH
+ * fd_cmd - finds a command in PATH
  * @info: the parameter & return info struct
  *
  * Return: void
@@ -95,7 +95,7 @@ void fd_cmd(info_t *info)
 		info->linecount_flag = 0;
 	}
 	for (i = 0, k = 0; info->arg[i]; i++)
-		if (!is_deliminated(info->arg[i], " \t\n"))
+		if (!is_delimi(info->arg[i], " \t\n"))
 			k++;
 	if (!k)
 		return;
@@ -110,7 +110,7 @@ void fd_cmd(info_t *info)
 	{
 		if ((intratv(info) || _getenvrn(info, "PATH=")
 			|| info->argv[0][0] == '/') && is_cod(info, info->argv[0]))
-			 fk_cmd(info);
+			fk_cmd(info);
 		else if (*(info->arg) != '\n')
 		{
 			info->status = 127;
@@ -120,7 +120,7 @@ void fd_cmd(info_t *info)
 }
 
 /**
- * fork_cmd - forks a an exec thread to run cmd
+ * fk_cmd - forks a an exec thread to run cmd
  * @info: the parameter & return info struct
  *
  * Return: void
@@ -154,7 +154,7 @@ void fk_cmd(info_t *info)
 		{
 			info->status = WEXITSTATUS(info->status);
 			if (info->status == 126)
-				 print_err(info, "Permission denied\n");
+				print_err(info, "Permission denied\n");
 		}
 	}
 }

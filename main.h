@@ -161,7 +161,7 @@ int bfree(void **);
 
 /* toem_atoi.c */
 int intratv(info_t *);
-int is_deliminated(char, char *);
+int is_delimi(char, char *);
 int _isalpha(int);
 int _atoi(char *);
 

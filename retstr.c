@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
+ * _strlength - returns the length of a string
  * @s: the string whose length to check
  *
  * Return: integer length of string
@@ -19,13 +19,13 @@ int _strlength(char *s)
 }
 
 /**
- * _strcmp - performs lexicogarphic comparison of two strangs.
+ * _strcompare - performs lexicogarphic comparison of two strangs.
  * @s1: the first strang
  * @s2: the second strang
  *
  * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
  */
- int _strcompare(char *s1, char *s2)
+int _strcompare(char *s1, char *s2)
 {
 	while (*s1 && *s2)
 	{
@@ -41,7 +41,7 @@ int _strlength(char *s)
 }
 
 /**
- * starts_with - checks if needle starts with haystack
+ * stts_wh - checks if needle starts with haystack
  * @haystack: string to search
  * @needle: the substring to find
  *
@@ -56,7 +56,7 @@ char *stts_wh(const char *haystack, const char *needle)
 }
 
 /**
- * _strcat - concatenates two strings
+ * _strcatts - concatenates two strings
  * @dest: the destination buffer
  * @src: the source buffer
  *

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _myenv - prints the current environment
+ * _ourenviron - prints the current environment
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  * Return: Always 0
@@ -13,7 +13,7 @@ int _ourenviron(info_t *info)
 }
 
 /**
- * _getenv - gets the value of an environ variable
+ * _getenvrn - gets the value of an environ variable
  * @info: Structure containing potential arguments. Used to maintain
  * @name: env var name
  *
@@ -35,7 +35,7 @@ char *_getenvrn(info_t *info, const char *name)
 }
 
 /**
- * _mysetenv - Initialize a new environment variable,
+ * _oursetenv - Initialize a new environment variable,
  *             or modify an existing one
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
@@ -54,7 +54,7 @@ int _oursetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - Remove an environment variable
+ * _ourunsetenviron - Remove an environment variable
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
  *  Return: Always 0
@@ -65,17 +65,17 @@ int _ourunsetenviron(info_t *info)
 
 	if (info->argc == 1)
 	{
-		 _inputstr("Too few arguements.\n");
+		_inputstr("Too few arguements.\n");
 		return (1);
 	}
 	for (i = 1; i <= info->argc; i++)
-		 _unsetern(info, info->argv[i]);
+		_unsetern(info, info->argv[i]);
 
 	return (0);
 }
 
 /**
- * populate_env_list - populates env linked list
+ * populate_environ_list - populates env linked list
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  * Return: Always 0

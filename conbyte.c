@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- **_memset - fills memory with a constant byte
+ **_memosets - fills memory with a constant byte
  *@s: the pointer to the memory area
  *@b: the byte to fill *s with
  *@n: the amount of bytes to be filled
@@ -60,4 +60,3 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	free(ptr);
 	return (p);
 }
-
