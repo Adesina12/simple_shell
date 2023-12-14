@@ -153,8 +153,7 @@ char **strgtoww2(char *, char);
 /* toem_realloc.c */
 char *_memosets(char *, char, unsigned int);
 void ffree(char **);
-void *_realloc(void *, 
-unsigned int, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
 
 /* toem_memory.c */
 int bfree(void **);
